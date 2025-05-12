@@ -105,7 +105,7 @@ $project = $projectRead->getAll();
 					</div>
 					<div class="col-12 col-md-5 col-xl-4 text-center ms-0 ms-xl-5 px-5 px-md-0 ps-xl-4 pe-xl-5">
 						<img
-							src="../assets/img/Profil.png"
+							src="../assets/img/Profile-Photo.png"
 							class="img-thumbnail rounded-5"
 							alt="Dimas-Maulana"
 							style="transform: rotate(9deg)" />
@@ -153,8 +153,8 @@ $project = $projectRead->getAll();
 							<?php $i = 1; ?>
 							<?php foreach ($project as $projectRow) { ?>
 								<div class="col-12 col-md-6 col-lg-4 col-xxl-3 mt-4">
-									<div class="card h-100">
-										<img src="../assets/img/<?= htmlspecialchars($projectRow['project_photo']) ?>" class="card-img-top" alt="Project-<?= $i; ?>" />
+									<div class="card rounded-5 h-100">
+										<img src="../assets/img/<?= htmlspecialchars($projectRow['project_photo']) ?>" class="card-img-top rounded-top-5" alt="Project-<?= $i; ?>" />
 										<div class="card-body">
 											<h5 class="card-title"><?= htmlspecialchars($projectRow['project_category']) ?></h5>
 											<p class="card-text"><?= htmlspecialchars($projectRow['project_details']) ?></p>
@@ -397,40 +397,8 @@ $project = $projectRead->getAll();
 		</div>
 	</footer>
 
-	<!-- CREATE.HTML -->
-	<div id="create-project" class="modal fade" tabindex="-1" aria-labelledby="create-project-label" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header border-0 py-1 px-3">
-					<h2 id="create-project-label" class="modal-title fs-1">New Project</h2>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body p-4 pt-1">
-					<form class="needs-validation" action="" method="POST" enctype="multipart/form-data">
-						<div class="mb-3">
-							<label class="form-label" for="category">Category</label>
-							<input type="text" class="form-control" id="category" name="category" placeholder="e.g., Graphic Design" required />
-						</div>
-						<div class="mb-3">
-							<label class="form-label" for="details">Details</label>
-							<textarea
-								class="form-control"
-								id="details"
-								name="details"
-								rows="4"
-								placeholder="e.g., ETTASHANE - Social media design special ramadhan"
-								required></textarea>
-						</div>
-						<div class="mb-3">
-							<label class="form-label" for="projectPhoto">Photo</label>
-							<input type="file" class="form-control" id="projectPhoto" name="projectPhoto" accept="image/*" required />
-						</div>
-						<button type="submit" class="btn btn-gradient w-100 mt-3 py-2" name="submitAddProject">Submit</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+	<!-- FORM CREATE -->
+	<?php require_once 'create.php'; ?>
 
 	<!-- JAVASCRIPT -->
 	<script src="../assets/js/bootstrap.bundle.js"></script>

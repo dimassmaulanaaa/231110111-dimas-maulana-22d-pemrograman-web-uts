@@ -37,7 +37,7 @@ $data = mysqli_fetch_assoc($result);
 			<form class="needs-validation" action="" method="POST" enctype="multipart/form-data">
 				<!-- image -->
 				<div class="container text-center">
-					<img src="../assets/img/<?= htmlspecialchars($data['project_photo']) ?>" height="333px" width="333px" class="img-thumbnail" alt="Project-Photo" />
+					<img src="../assets/img/<?= htmlspecialchars($data['project_photo']) ?>" height="333px" width="333px" class="img-thumbnail rounded-5" alt="Project-Photo" />
 					<br />
 					<label class="form-label visually-hidden" for="oldProjectPhoto">Changes Project Photo</label>
 					<input
@@ -48,7 +48,7 @@ $data = mysqli_fetch_assoc($result);
 						value="<?= htmlspecialchars($data['project_photo']) ?>"
 						accept="image/*" />
 					<input type="file" class="form-control visually-hidden" id="photo" name="projectPhoto" accept="image/*" />
-					<button id="choose-file-button" type="button" class="btn btn-secondary btn-sm my-1 px-5">Changes Project Photo</button>
+					<button id="choose-file-button" type="button" class="btn btn-sm btn-secondary rounded-3 my-1 px-5">Changes Project Photo</button>
 				</div>
 				<!-- input -->
 				<div class="container my-4">
@@ -85,8 +85,8 @@ $data = mysqli_fetch_assoc($result);
 				<!-- button -->
 				<div class="row text-center mb-4">
 					<div class="col">
-						<button type="submit" class="btn btn-gradient" name="submitUpdateProject">Save Changes</button>
-						<button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#discard-confirm-modal">
+						<button type="submit" class="btn btn-gradient rounded-3 mx-1 px-4" name="submitUpdateProject">Save Changes</button>
+						<button type="button" class="btn btn-outline-secondary rounded-3 mx-1 px-3" data-bs-toggle="modal" data-bs-target="#discard-confirm-modal">
 							Discard Changes
 						</button>
 					</div>
