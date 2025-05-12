@@ -170,7 +170,7 @@ $project = $projectRead->getAll();
 											</button>
 											<ul class="dropdown-menu" aria-labelledby="dropdown-menu-button">
 												<li><a class="dropdown-item" href="update.html">Edit</a></li>
-												<li><a class="dropdown-item" href="">Delete</a></li>
+												<li><a class="dropdown-item" href="../controllers/delete.php?project_id=<?= htmlspecialchars($projectRow["project_id"]) ?>">Delete</a></li>
 											</ul>
 										</div>
 									</div>
