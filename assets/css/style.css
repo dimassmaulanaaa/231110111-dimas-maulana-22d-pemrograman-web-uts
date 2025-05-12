@@ -145,6 +145,28 @@ p {
 .fs-7 {
   font-size: .9rem !important;
 }
+#alert {
+  h2, .h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+  }
+  h2, .h2 {
+  font-size: calc(1.325rem + 0.9vw);
+  }
+  @media (min-width: 1200px) {
+    h2, .h2 {
+      font-size: 2rem;
+    }
+  }
+  p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--bs-heading-color);
+  }
+}
 
 
 

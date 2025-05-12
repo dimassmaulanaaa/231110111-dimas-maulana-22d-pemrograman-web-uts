@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION['notification'])): ?>
-    <div class="alert alert-<?= $_SESSION['notification']['type'][0] ?> alert-dismissible fade show sticky-top text-center mx-auto py-3 px-4 px-sm-5" role="alert">
+    <div id="alert" class="alert alert-<?= $_SESSION['notification']['type'][0] ?> alert-dismissible fade show sticky-top text-center mx-auto py-3 px-4 px-sm-5" role="alert">
         <h2 class="text-capitalize"><?= $_SESSION['notification']['type'][1] ?>!</h2>
         <hr />
         <p><?= $_SESSION['notification']['message'] ?></p>
