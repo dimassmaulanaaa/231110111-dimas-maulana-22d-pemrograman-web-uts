@@ -131,7 +131,7 @@ $project = $projectRead->getAll();
 										name="search-project-keyword"
 										class="form-control rounded-pill search-icon"
 										type="search"
-										placeholder="Search"
+										placeholder="Replace spaces with '_' (e.g., 'graphic_design')"
 										autocomplete="off"
 										aria-label="Search" />
 								</form>
