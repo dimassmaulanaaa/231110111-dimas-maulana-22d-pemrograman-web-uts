@@ -105,7 +105,7 @@ $project = $projectRead->getAll();
 					</div>
 					<div class="col-12 col-md-5 col-xl-4 text-center ms-0 ms-xl-5 px-5 px-md-0 ps-xl-4 pe-xl-5">
 						<img
-							src="../assets/img/IMG_0004.JPG"
+							src="../assets/img/Profil.png"
 							class="img-thumbnail rounded-5"
 							alt="Dimas-Maulana"
 							style="transform: rotate(9deg)" />
