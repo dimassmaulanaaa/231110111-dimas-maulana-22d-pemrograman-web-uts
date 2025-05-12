@@ -1,5 +1,6 @@
 <?php
 
+require_once '../controllers/create.php';
 require_once '../controllers/read.php';
 
 $projectRead = new ProjectRead($conn);
@@ -64,6 +65,9 @@ $project = $projectRead->getAll();
 			</div>
 		</div>
 	</nav>
+
+	<!-- ALERTS -->
+	<?php require_once 'partials/alert.php'; ?>
 
 	<!-- MAIN -->
 	<main>
@@ -149,7 +153,7 @@ $project = $projectRead->getAll();
 							<?php $i = 1; ?>
 							<?php foreach ($project as $projectRow) { ?>
 								<div class="col-12 col-md-6 col-xl-4 mt-4">
-									<div class="card">
+									<div class="card h-100">
 										<img src="../assets/img/<?= htmlspecialchars($projectRow['project_photo']) ?>" class="card-img-top" alt="Project-<?= $i; ?>" />
 										<div class="card-body">
 											<h5 class="card-title"><?= htmlspecialchars($projectRow['project_category']) ?></h5>
