@@ -1,6 +1,9 @@
 <?php
 
-require_once "../config/db.php";
+require_once '../controllers/read.php';
+
+$projectRead = new ProjectRead($conn);
+$project = $projectRead->getAll();
 
 ?>
 
@@ -111,12 +114,14 @@ require_once "../config/db.php";
 		<section id="works" aria-labelledby="works-heading">
 			<div class="container">
 				<div class="row">
+					<!-- tittle -->
 					<div class="col-12 text-center mb-4">
 						<div class="container">
 							<h2 id="works-heading">My Recent Works</h2>
 							<p>I transform your vision and needs into a captivating digital presence that delights both you and your audience.</p>
 						</div>
 					</div>
+					<!-- form search -->
 					<div class="col-12 mt-2">
 						<div class="row row-cols-auto d-flex justify-content-center align-items-center">
 							<div class="col-10 col-sm-11 m-0 p-0 px-2">
@@ -138,29 +143,34 @@ require_once "../config/db.php";
 							</div>
 						</div>
 					</div>
+					<!-- project list -->
 					<div id="project-list">
 						<div class="col-12 col-md-6 col-xl-4 mt-4">
-							<div class="card">
-								<img src="../assets/img/Dimdim.png" class="card-img-top" alt="1" />
-								<div class="card-body">
-									<h5 class="card-title">Graphic Design</h5>
-									<p class="card-text">ETTASHANE - Graphic Design</p>
+							<?php $i = 1; ?>
+							<?php foreach ($project as $projectRow) { ?>
+								<div class="card">
+									<img src="../assets/img/<?= htmlspecialchars($projectRow['project_photo']) ?>" class="card-img-top" alt="Project-<?= $i; ?>" />
+									<div class="card-body">
+										<h5 class="card-title"><?= htmlspecialchars($projectRow['project_category']) ?></h5>
+										<p class="card-text"><?= htmlspecialchars($projectRow['project_details']) ?></p>
+									</div>
+									<div class="dropdown d-flex justify-content-end pb-2 pe-2">
+										<button
+											id="dropdown-menu-button"
+											class="btn btn-circular-secondary btn-round dropdown-toggle"
+											type="button"
+											data-bs-toggle="dropdown"
+											aria-expanded="false">
+											<i class="bi bi-list"></i>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdown-menu-button">
+											<li><a class="dropdown-item" href="update.html">Edit</a></li>
+											<li><a class="dropdown-item" href="">Delete</a></li>
+										</ul>
+									</div>
 								</div>
-								<div class="dropdown d-flex justify-content-end pb-2 pe-2">
-									<button
-										id="dropdown-menu-button"
-										class="btn btn-circular-secondary btn-round dropdown-toggle"
-										type="button"
-										data-bs-toggle="dropdown"
-										aria-expanded="false">
-										<i class="bi bi-list"></i>
-									</button>
-									<ul class="dropdown-menu" aria-labelledby="dropdown-menu-button">
-										<li><a class="dropdown-item" href="update.html">Edit</a></li>
-										<li><a class="dropdown-item" href="">Delete</a></li>
-									</ul>
-								</div>
-							</div>
+								<?php $i++; ?>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
