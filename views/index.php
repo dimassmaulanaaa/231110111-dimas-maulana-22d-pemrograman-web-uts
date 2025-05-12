@@ -152,7 +152,7 @@ $project = $projectRead->getAll();
 						<div class="row">
 							<?php $i = 1; ?>
 							<?php foreach ($project as $projectRow) { ?>
-								<div class="col-12 col-md-6 col-xl-4 mt-4">
+								<div class="col-12 col-md-6 col-lg-4 col-xxl-3 mt-4">
 									<div class="card h-100">
 										<img src="../assets/img/<?= htmlspecialchars($projectRow['project_photo']) ?>" class="card-img-top" alt="Project-<?= $i; ?>" />
 										<div class="card-body">
