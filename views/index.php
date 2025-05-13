@@ -30,7 +30,7 @@ $project = $projectRead->getAll();
 	<!-- NAVBAR -->
 	<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
 		<div class="container-fluid tabs-container mx-0 mx-md-1 mx-xl-2">
-			<a class="navbar-brand" href="index.html">Dimas'sPortfolio</a>
+			<a class="navbar-brand" href="index.php">Dimas'sPortfolio</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -57,17 +57,17 @@ $project = $projectRead->getAll();
 					</li>
 				</ul>
 				<!-- lg+ -->
-				<a type="button" class="btn rounded-pill btn-gradient ms-4 px-4 d-none d-lg-block" href="#contact"> Hire Me! </a>
+				<button type="button" class="btn rounded-pill btn-gradient ms-4 px-4 d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#contact-modal"> Hire Me! </button>
 				<!-- md- -->
 				<div class="container-fluid d-flex d-block d-lg-none">
-					<a type="button" class="btn rounded-pill btn-gradient mx-auto pb-2 px-4" href="#contact"> Hire Me! </a>
+					<button type="button" class="btn rounded-pill btn-gradient mx-auto pb-2 px-4" data-bs-toggle="modal" data-bs-target="#contact-modal"> Hire Me! </button>
 				</div>
 			</div>
 		</div>
 	</nav>
 
 	<!-- ALERTS -->
-	<?php require_once 'partials/alert.php'; ?>
+	<?php require_once '../partials/alert.php'; ?>
 
 	<!-- MAIN -->
 	<main>
@@ -399,6 +399,9 @@ $project = $projectRead->getAll();
 
 	<!-- FORM CREATE -->
 	<?php require_once 'create.php'; ?>
+
+	<!-- MODAL -->
+	<?php require_once "../partials/modal.php" ?>
 
 	<!-- JAVASCRIPT -->
 	<script src="../assets/js/bootstrap.bundle.js"></script>

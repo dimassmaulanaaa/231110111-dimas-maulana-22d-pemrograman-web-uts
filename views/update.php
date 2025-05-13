@@ -102,26 +102,7 @@ $data = mysqli_fetch_assoc($result);
 		</div>
 	</footer>
 
-	<!-- MODAL -->
-	<div id="discard-confirm-modal" class="modal fade" tabindex="-1" aria-labelledby="discard-confirm-modal-label" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header py-1 px-3">
-					<h2 id="discard-confirm-modal-label" class="modal-title fs-2">
-						<i class="fas fa-exclamation-triangle"></i>Confirm Discard
-					</h2>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body py-4 px-3">
-					<p>All unsaved changes will be permanently lost. Are you sure?</p>
-				</div>
-				<div class="modal-footer py-2">
-					<button type="button" class="btn btn-gradient" data-bs-dismiss="modal">Keep Editing</button>
-					<a class="btn btn-outline-secondary" href="index.html">Discard Anyway</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php require_once "../partials/modal.php" ?>
 
 	<!-- JAVASCRIPT -->
 	<script src="../assets/js/bootstrap.bundle.js"></script>
