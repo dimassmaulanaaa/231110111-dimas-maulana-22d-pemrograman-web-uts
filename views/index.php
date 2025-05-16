@@ -311,21 +311,21 @@ $project = $projectRead->getAll();
 								<p class="pt-1 pb-4 px-1">
 									I design and code beautifully simple things and i love what i do. Just simple like that!
 								</p>
-								<form class="row g-3">
+								<form id="contact-form" class="row g-3">
 									<div class="col-12 col-sm-6">
-										<input type="text" class="form-control" name="firstName" placeholder="First name" required />
+										<input type="text" class="form-control" id="f-name" name="f-name" placeholder="First name" required />
 									</div>
 									<div class="col-12 col-sm-6">
-										<input type="text" class="form-control" name="lastName" placeholder="Last name" required />
+										<input type="text" class="form-control" id="l-name" name="l-name" placeholder="Last name" />
 									</div>
 									<div class="col-12 col-sm-6">
-										<input type="email" class="form-control" name="email" placeholder="Email address" required />
+										<input type="email" class="form-control" id="email" name="email" placeholder="Email address" required />
 									</div>
 									<div class="col-12 col-sm-6">
-										<input type="tel" class="form-control" name="phoneNumber" placeholder="Phone number" required />
+										<input type="tel" class="form-control" id="phone-num" name="phone-num" placeholder="Phone number" required />
 									</div>
 									<div class="col-12">
-										<textarea class="form-control" name="message" rows="6" placeholder="Message.." required></textarea>
+										<textarea class="form-control" id="message" name="message" rows="6" placeholder="Message.." required></textarea>
 									</div>
 									<div class="col-12">
 										<button type="submit" class="btn rounded-pill btn-gradient mb-3 py-2 px-4">Send Message</button>
